@@ -118,3 +118,6 @@ tail -3 logs/storm/ramp.log
 - `logs/overload/analysis.json`: fee-tier probe analysis for all phases (P1 overload, P3 drain, P4 max)
 - `findings/round1-overload-57min-summary.md`: round 1 overload summary (by the overload worker)
 - `tools/report-stats.py`, `tools/secret-scan.sh`
+
+## Round 3 (26 Sep 2026)
+vprogs under a TN10 storm: our own vprog on vprogs master and tic-tac-toe, plus the n0 `--utxoindex` restart. See the private repo [STP-KAS/grok-bot-vprogs-round3](https://github.com/STP-KAS/grok-bot-vprogs-round3).
