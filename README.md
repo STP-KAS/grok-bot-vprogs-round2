@@ -76,7 +76,7 @@ Priority tracks **fee relative to the spam**, so a dApp needs a fee that follows
 | Txs/block | ~800 (median 801, 21:36–22:00) | 772 | flat (blocks already ~99% compute-full) |
 | Mempool | 50–96k band. Median 64.9k, **max 99,967** (at the cap) | median 53.7k, **max 87.6k** | lower, kept clear of the cap |
 | Crashes | **n0 panic at 21:12:50 (100001 > 100000, F1)**. 58k lost at n1 restart (F2) | **none** | ✔ improved |
-| Evictions | 30,298 low-fee txs evicted in the overload | not yet counted **[gap]** | — |
+| Feerate evictions (kaspad log "Mempool stats") | 30,298 in the overload ✔ | **0** (22:47:26 → 23:30) ✔ | pool never full enough to evict |
 | Storm fee rate | 120 sompi/g, ~2.4k TKAS/10 min | 200 sompi/g, **~4.55k TKAS/10 min** | ×1.9 cost |
 | Min-fee user p50 / max | 7.0 s / 105 s | **12.0 s / 131.5 s** | ✘ worse |
 | 10× fee user p50 / max | 1.2 s / 3.7 s | 1.2 s / 2.4 s | unchanged |
@@ -107,7 +107,6 @@ tail -3 logs/storm/ramp.log
 - Recompute any window: `python3 tools/report-stats.py <workdir>/logs 22:48 23:59`.
 
 ## Gaps / to finalize
-- The eviction count for round 2 was not extracted.
 - The clean recovery measurement after funds run out is still pending. So is the final `overload-final-summary.md` from the overload worker.
 - The block-rate increase is attributed to our miners by inference. Our miner share was not re-measured for round 2.
 - Vprog moves under load are still skipped. They need a `--utxoindex` node (round 1, F7).
