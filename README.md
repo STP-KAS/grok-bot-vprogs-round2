@@ -6,9 +6,9 @@
 > **STATUS: SKELETON — round 2 is running. Numbers are filled in after ≥20–30 min at full throttle.**
 
 ## Round 2 plan (from the overload worker)
-1. 21:48:41–22:18:41 CEST: phase 1, 30-min overload with fee-tier probes (end of round 1).
-2. 22:18:41 → ~22:23:41: **5-min break** (`/tmp/tps-storm.limits` `RATE_MAX=0`) to measure recovery / mempool drain.
-3. ~22:24 →: **back to full throttle, pushed harder, and it stays there** (no settle at 2,000 TPS). n0 only.
+1. 21:48:41–23:00 CEST: phase 1 overload with fee-tier probes (extended from 30 min at 22:11; RATE_MAX raised to 60k at 22:16).
+2. 23:00 → 23:02: **break** (`/tmp/tps-storm.limits` `RATE_MAX=0`) to measure recovery / mempool drain.
+3. 23:02 →: **back to full throttle, pushed harder, and it stays there** (no settle at 2,000 TPS). n0 only.
 
 ## Sections (to be filled)
 - Setup changes vs round 1
