@@ -187,3 +187,7 @@ python3 tools/report-stats.py logs 22:48 23:50   # same-day HH:MM only
 ```
 
 TESTNET ONLY. No seeds, private keys, or `/home/box/secure` material are in this repo.
+
+## Related
+
+- [grok-bot-explorer-rewards-check](https://github.com/STP-KAS/grok-bot-explorer-rewards-check) (private): the TN10 explorer tx list froze at 2026-09-25 21:55:38 CEST (the public indexer stalled network-wide, ~7 min into the PHASE1 overload). Mining rewards to our address are verified live and match the balance growth exactly.
